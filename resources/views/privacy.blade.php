@@ -22,7 +22,7 @@
 
     <h3>Log Files</h3>
     <p align="justify">
-        Seperti banyak situs Web lain, <strong>Jakbloe</strong> yang menggunakan file log. File-file ini hanya log
+        Seperti banyak situs Web lain, <b>Jakbloe</b> yang menggunakan file log. File-file ini hanya log
         pengunjung ke situs -
         biasanya prosedur
         standar untuk perusahaan hosting dan bagian hosting analisis layanan ini. Informasi di dalam file log meliputi
