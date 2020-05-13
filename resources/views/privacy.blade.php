@@ -17,7 +17,7 @@
         <br>
         Di Jakbloe kami mempertimbangkan privasi seluruh pengguna kami menjadi sangat penting.
         Pada Dokumen kebijakan privasi ini kami akan menjelaskan secara rinci jenis informasi pribadi yang telah
-        dikumpulkan dan dicatat <strong>Jakbloe</strong> dan bagaimana kami menggunakannya.
+        dikumpulkan dan dicatat <b>Jakbloe</b> dan bagaimana kami menggunakannya.
     </p>
 
     <h3>Log Files</h3>
