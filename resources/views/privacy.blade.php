@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('master')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - JakBloe</title>
-</head>
+@section('deskripsi')
+<section class="breadcrumb_area">
+            <img class="breadcrumb_shap" src="img/breadcrumb/banner_bg.png" alt="">
+            <div class="container">
+                <div class="breadcrumb_content text-center">
+                    <h1 class="f_p f_700 f_size_50 w_color l_height50 mb_20">Privacy Policy</h1>
+                    <p class="f_400 w_color f_size_16 l_height26">Halaman Kebijakan Website JakBloe</p>
+                </div>
+            </div>
+        </section>
 
-<body>
-    <h1>Privacy Policy</h1>
+        <section class="blog_area sec_pad">
+            <div class="container">
+        <h1>Privacy Policy</h1>
     <br>
     <h3>Kebijakan Privasi</h3>
     <p align="justify">
@@ -95,7 +100,7 @@
         lebih
         rinci tentang praktek-praktek mereka serta untuk petunjuk tentang cara memilih dari praktek tertentu. kebijakan
         privasi
-        kodingwae.blogspot.co.id ini tidak berlaku untuk, dan kita tidak dapat mengontrol kegiatan, pengiklan lain atau
+        <b>Jakbloe</b> ini tidak berlaku untuk, dan kita tidak dapat mengontrol kegiatan, pengiklan lain atau
         situs
         web. Anda mungkin menemukan daftar komprehensif kebijakan privasi ini dan link mereka di sini: Link Kebijakan
         Privasi.
@@ -135,6 +140,6 @@
     <p>
         Kebijakan Privasi ini terakhir diperbaharui pada: Rabu, 13 Mei 2020.
     </p>
-</body>
+    </section>
 
-</html>
+    @endsection
