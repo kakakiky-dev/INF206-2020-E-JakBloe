@@ -6,7 +6,11 @@
             <div class="container">
                 <div class="breadcrumb_content text-center">
                     <h1 class="f_p f_700 f_size_50 w_color l_height50 mb_20">About Us</h1>
-                    <p class="f_400 w_color f_size_16 l_height26">Halaman informasi tentang Website JakBloe</p>
+                    <p class="f_400 w_color f_size_16 l_height26">  JakBloe adalah sebuah website jual beli online antara para pedagang dengan supplier
+                    <br>
+                    PPedagang dapat melakukan pembelian secara bersamaan dengan pedagang lainnya dalam jumlah yang besar
+                    <br>
+                    Pada website ini, pedagang dan supplier membuat account untuk mengakses fitur lengkap. </p>
                 </div>
             </div>
         </section>
