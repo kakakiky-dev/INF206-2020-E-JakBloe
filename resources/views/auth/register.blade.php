@@ -1,7 +1,13 @@
-@extends('layouts.app')
+@extends('master')
 
-@section('content')
-<div class="container">
+@section('deskripsi')
+<section class="breadcrumb_area">
+            <img class="breadcrumb_shap" src="img/breadcrumb/banner_bg.png" alt="">
+            <div class="container">
+                <div class="breadcrumb_content text-center">
+                    <h1 class="f_p f_700 f_size_50 w_color l_height50 mb_20">REGISTER PAGE</h1>
+                    <p class="f_400 w_color f_size_16 l_height26">Silahkan Registrasi Untuk Menggunakan Fitur Website JakBloe</p>
+                    <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -63,7 +69,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">
                                     {{ __('Register') }}
                                 </button>
                             </div>
@@ -74,4 +80,7 @@
         </div>
     </div>
 </div>
+                </div>
+            </div>
+        </section>
 @endsection
