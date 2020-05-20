@@ -31,6 +31,9 @@ Route::get('/privacy', function () {
 Route::get('/disclaimer', function () {
     return view('disclaimer');
 });
+Route::get('/profile', function () {
+    return view('profile');
+});
 
 // route blog
 Route::get('/aboutus', 'BlogController@aboutus');
@@ -38,8 +41,7 @@ Route::get('/disclaimer', 'BlogController@disclaimer');
 Route::get('/privacy', 'BlogController@privacy');
 Route::get('/signup', 'BlogController@signup');
 Route::get('/signin', 'BlogController@signin');
-Route::get('/pph', 'BlogController@pph');
-Route::get('/pbb', 'BlogController@pbb');
+Route::get('/profile', 'BlogController@profile');
 
 Auth::routes();
 
