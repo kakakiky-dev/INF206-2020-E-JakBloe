@@ -42,4 +42,14 @@ class BlogController extends Controller
 	{
 		return view('profile');
 	}
+
+	public function konfirmasi()
+	{
+		return view('konfirmasi');
+	}
+
+	public function pembayaran()
+	{
+		return view('pembayaran');
+	}
 }
