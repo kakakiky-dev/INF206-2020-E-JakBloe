@@ -7,39 +7,29 @@ use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
-
-	public function about()
-	{
+ 
+	public function about(){
 		return view('about');
-	}
-
-	public function disclaimer()
-	{
+    }
+    
+    public function disclaimer(){
 		return view('disclaimer');
 	}
-
-	public function ContactUs()
-	{
+ 
+	public function ContactUs(){
 		return view('ContactUs');
-	}
-
-	public function privacy()
-	{
+    }
+    
+    public function privacy(){
 		return view('privacy');
 	}
 
-	public function register()
-	{
+	public function register(){
 		return view('register');
 	}
 
-	public function login()
-	{
+	public function login(){
 		return view('login');
 	}
-
-	public function profile()
-	{
-		return view('profile');
-	}
-}
+ 
+} 
