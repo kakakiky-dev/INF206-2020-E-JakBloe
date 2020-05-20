@@ -77,6 +77,14 @@
                         </ul>
                     </div>
                       
+                        <div class="p-1 bg-light " style="border-radius: 30px ">
+                            <div class="input-group"  >
+                                <input type="search" placeholder="Cari ?" aria-describedby="button-addon1" class="form-control border-0 bg-light" style="border-radius: 30px ">
+                                <div class="input-group-append">
+                                    <button id="button-addon1" type="submit" class="btn btn-link " style="color: #17d1a6" ><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
                     <a class="btn_get btn_hover btn_get_radious hidden-sm hidden-xs" href="\login">Masuk</a>
                     <a class="btn_get btn_hover btn_get_radious hidden-sm hidden-xs" href="#">Keluar</a>
             </nav>
