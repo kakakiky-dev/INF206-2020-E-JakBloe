@@ -31,6 +31,9 @@ Route::get('/privacy', function () {
 Route::get('/disclaimer', function () {
     return view('disclaimer');
 });
+Route::get('/profile', function () {
+    return view('profile');
+});
 
 
 
