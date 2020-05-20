@@ -34,14 +34,22 @@ Route::get('/disclaimer', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+Route::get('/konfirmasi', function () {
+    return view('konfirmasi');
+});
+Route::get('/pembayaran', function () {
+    return view('pembayaran');
+});
 
 // route blog
-Route::get('/aboutus', 'BlogController@aboutus');
+Route::get('/about', 'BlogController@about');
 Route::get('/disclaimer', 'BlogController@disclaimer');
 Route::get('/privacy', 'BlogController@privacy');
-Route::get('/signup', 'BlogController@signup');
-Route::get('/signin', 'BlogController@signin');
+Route::get('/register', 'BlogController@register');
+Route::get('/login', 'BlogController@login');
 Route::get('/profile', 'BlogController@profile');
+Route::get('/konfirmasi', 'BlogController@konfirmasi');
+Route::get('/pembayaran', 'BlogController@pembayaran');
 
 Auth::routes();
 
