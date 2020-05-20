@@ -22,14 +22,18 @@
     <link rel="stylesheet" href="vendors/scroll/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .menu_one .btn_get {
+    margin-left: 20px;
+}
+    </style>
 </head>
 
 <body>
     <div class="body_wrapper">
         <header class="header_area">
-            <nav class="navbar navbar-expand-lg menu_one menu_four">
-                <div class="container">
-                    <a class="navbar-brand sticky_logo" href="/home"><img src="img/jakbloewhite1.png" srcset="img/logo2x-2.png 2x" alt="logo"><img src="img/jakbloecolor.png" srcset="img/logo2x.png 2x" alt=""></a>
+            <nav class="navbar navbar-expand-lg menu_one menu_four mx-4">
+                    <a class="navbar-brand sticky_logo pl-4" href="/home"><img src="img/jakbloewhite1.png" srcset="img/logo2x-2.png 2x" alt="logo"><img src="img/jakbloecolor.png" srcset="img/logo2x.png 2x" alt=""></a>
                     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="menu_toggle">
                             <span class="hamburger">
@@ -44,7 +48,7 @@
                         </span>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse mt-2" id="navbarSupportedContent">
                         <ul class="navbar-nav menu w_menu pl_100">
                             <li class="nav-item dropdown submenu mega_menu mega_menu_two active">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -65,14 +69,24 @@
                                     <li class="nav-item"><a href="shop-grid.html" class="nav-link">Simulasi Pajak</a></li>
                                     <li class="nav-item"><a href="shop-list.html" class="nav-link">Simulasi PPH</a></li>
                                     <li class="nav-item"><a href="product-details-1.html" class="nav-link">Simulasi PBB</a></li>
+                                    
                                 </ul>
                             </li>
                             </li>
+
                         </ul>
+                    </div>
+                      
+                        <div class="p-1 bg-light " style="border-radius: 30px ">
+                            <div class="input-group"  >
+                                <input type="search" placeholder="Cari ?" aria-describedby="button-addon1" class="form-control border-0 bg-light" style="border-radius: 30px ">
+                                <div class="input-group-append">
+                                    <button id="button-addon1" type="submit" class="btn btn-link " style="color: #17d1a6" ><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
                     </div>
                     <a class="btn_get btn_hover btn_get_radious hidden-sm hidden-xs" href="\login">Masuk</a>
                     <a class="btn_get btn_hover btn_get_radious hidden-sm hidden-xs" href="#">Keluar</a>
-                </div>
             </nav>
         </header>
 
