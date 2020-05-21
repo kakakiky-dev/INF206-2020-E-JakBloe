@@ -40,6 +40,10 @@ Route::get('/konfirmasi', function () {
 Route::get('/pembayaran', function () {
     return view('pembayaran');
 });
+Route::get('/post', function () {
+    return view('post');
+});
+
 
 // route blog
 Route::get('/about', 'BlogController@about');
