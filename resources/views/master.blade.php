@@ -51,18 +51,18 @@
                     <div class="collapse navbar-collapse mt-2" id="navbarSupportedContent">
                         <ul class="navbar-nav menu w_menu pl_100">
                             <li class="nav-item dropdown submenu mega_menu mega_menu_two active">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                     Home
                                 </a>
                             </li>
-                            <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="/about">About Us</a>
+                            <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/about">About Us</a>
                             </li>
-                            <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="/disclaimer">Disclaimer</a>
+                            <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/disclaimer">Disclaimer</a>
                             </li>
-                            <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="/privacy">Privacy Policy</a>
+                            <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/privacy">Privacy Policy</a>
                             </li>
                             <li class="nav-item dropdown submenu">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                     Tools
                                 </a>
                                 <ul class="dropdown-menu">
