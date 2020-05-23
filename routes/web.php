@@ -40,9 +40,6 @@ Route::get('/konfirmasi', function () {
 Route::get('/pembayaran', function () {
     return view('pembayaran');
 });
-Route::get('/post', function () {
-    return view('post');
-});
 
 
 // route blog
@@ -58,3 +55,4 @@ Route::get('/pembayaran', 'BlogController@pembayaran');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/post', 'HomeController@post')->name('post');

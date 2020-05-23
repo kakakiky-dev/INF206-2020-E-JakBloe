@@ -46,7 +46,7 @@
                     <div class="collapse navbar-collapse mt-2" id="navbarSupportedContent">
                         <ul class="navbar-nav menu w_menu pl_100">
                             <li class="nav-item dropdown submenu mega_menu mega_menu_two active">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="/home" role="button" aria-haspopup="true" aria-expanded="false">
                                     Home
                                 </a>
                             </li>
@@ -56,17 +56,16 @@
                             </li>
                             <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/privacy">Privacy Policy</a>
                             </li>
-                            <li class="nav-item dropdown submenu">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                    Tools
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="shop-grid.html" class="nav-link">Simulasi Pajak</a></li>
-                                    <li class="nav-item"><a href="shop-list.html" class="nav-link">Simulasi PPH</a></li>
-                                    <li class="nav-item"><a href="product-details-1.html" class="nav-link">Simulasi PBB</a></li>
-                                    
-                                </ul>
+                            @if(Auth::guest())
+                            @else
+                            <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/post">Buat Post</a>
                             </li>
+                            @endif
+                            @if (Auth::guest())
+                            @else
+                            <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/profile">Profile Saya</a>
+                            </li>
+                            @endif
                             </li>
 
                         </ul>
@@ -82,11 +81,16 @@
                     @if(Auth::user())
                     @else
                     <a class="btn_get btn_hover btn_get_radious hidden-sm hidden-xs" href="\login">Masuk</a>
+                    <a class="btn_get btn_hover btn_get_radious hidden-sm hidden-xs" href="\register">Daftar</a>
                     @endif
+                    
+                    @if (Auth::guest())
+                    @else
                     <a class="btn_get btn_hover btn_get_radious hidden-sm hidden-xs"  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Keluar') }}</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
+                                    @endif
             </nav>
         </header>
 

@@ -1,105 +1,66 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('master')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
- 
-<h1>JakBloe</h1>
-<p>JakBloe adalah sebuah website yang berfungsi untuk membeli produk dagangan para pedagang dengan supplier yang memiliki jumlah yang besar sehingga produk dagangan dapat dibeli dengan harga yang lebih terjangkau</p>
-</body>
-
-</html>
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+@section('deskripsi')
+<section class="new_startup_banner_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.4s">
+                        <div class="new_startup_img">
+                            <div class="line line_one"><img src="img/new/line_01.png" alt=""></div>
+                            <div class="line line_two"><img src="img/new/line_02.png" alt=""></div>
+                            <div class="line line_three"><img src="img/new/line_03.png" alt=""></div>
+                            <img src="img/new/welcomejb2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex align-items-center">
+                        <div class="new_startup_content">
+                            <h2 class="f_700 f_size_40 l_height50 w_color mb_20 wow fadeInRight" data-wow-delay="0.3s">Gabung Bersama<br><span>JakBloe</span></h2>
+                            <p class="f_400 w_color l_height28 wow fadeInRight" data-wow-delay="0.4s">JakBloe adalah sebuah website yang memungkinkan kamu untuk membeli barang secara massal bersama dengan pedagang lainnya, sehingga barang yang kamu beli menjadi lebih murah.</p>
+                            <div class="action_btn d-flex align-items-center mt_40 wow fadeInRight" data-wow-delay="0.6s">
+                                <a href="/register" class="btn_hover app_btn">Daftar <i class="ti-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </body>
-</html>
+        </section>
+        <section class="startup_fuatures_area sec_pad">
+            <div class="container">
+                <div class="sec_title mb_70 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                    <h2 class="f_p f_size_30 l_height40 f_600 t_color text-center">Selamat Datang di Website<br> JakBloe</h2>
+                </div>
+                <ul class="nav nav-tabs startup_tab" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="market-tab" data-toggle="tab" href="#market" role="tab" aria-controls="market" aria-selected="true">
+                            <span class="icon"><i class="icon-cloud-upload"></i></span>
+                            <h3>Marketing<br> Cloud</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="app-tab" data-toggle="tab" href="#app" role="tab" aria-controls="app" aria-selected="false">
+                            <span class="icon"><i class="icon-screen-tablet"></i></span>
+                            <h3>Commerce<br> Apps</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="hubstaff-tab" data-toggle="tab" href="#hubstaff" role="tab" aria-controls="hubstaff" aria-selected="false">
+                            <span class="icon"><i class="icon-graduation"></i></span>
+                            <h3>Hubstaff<br> App</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="engine-tab" data-toggle="tab" href="#engine" role="tab" aria-controls="engine" aria-selected="false">
+                            <span class="icon"><i class="icon-refresh"></i></span>
+                            <h3>Automation<br> Engine</h3>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="business-tab" data-toggle="tab" href="#business" role="tab" aria-controls="business" aria-selected="false">
+                            <span class="icon"><i class="icon-bulb"></i></span>
+                            <h3>Business<br> Intellegence</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        @endsection
