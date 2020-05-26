@@ -24,6 +24,20 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
+<style>
+
+
+.navbar-collapse {
+    border-radius: 10px;
+}
+
+@media (max-width: 991px) {
+    .search-res {
+        margin: 0 1rem 1rem 1rem;
+    }
+}
+</style>
+
 <body>
     <div class="body_wrapper">
         <header class="header_area">
@@ -68,16 +82,30 @@
                             @endif
                             </li>
 
+                           
+                           
+                           
+
                         </ul>
-                    </div>
-                        <div class="p-1 bg-light " style="border-radius: 30px ">
+
+                        <ul class="navbar-nav ml-auto">
+                            <li class="search-res">
+                        <div class="p-1 bg-light mb-1" style="border-radius: 30px " >
                             <div class="input-group"  >
-                                <input type="search" placeholder="Mau Cari apa?" aria-describedby="button-addon1" class="form-control border-0 bg-light" style="border-radius: 30px ">
-                                <div class="input-group-append">
-                                    <button id="button-addon1" type="submit" class="btn btn-link " style="color: #17d1a6" ><i class="fa fa-search"></i></button>
-                            </div>
-                        </div>
-                    </div>
+                                        <input type="search" placeholder="Mau Cari apa?" aria-describedby="button-addon1" class="form-control border-0 bg-light" style="border-radius: 30px ">
+                                        <div class="input-group-append">
+                                            <button id="button-addon1" type="submit" class="btn btn-link " style="color: #17d1a6" ><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </div >
+                            </li>    
+                        <ul>
+
+                       
+                    </div >
+
+                    
+                        
                     @if(Auth::user())
                     @else
                     <a class="btn_get btn_hover btn_get_radious hidden-sm hidden-xs" href="\login">Masuk</a>
