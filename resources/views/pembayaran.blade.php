@@ -1,27 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-        <meta name="generator" content="Jekyll v3.8.6">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <title>Pemesanan JakBloe</title>
+@extends('master')
 
-    <style>
-        input[type=text], input[type=password], input [type=numeric],input[type=numeric] {
-            margin: 5px auto;
-            width: 300px;
-            padding: 10px;
-            border-radius: 40px;
-            }
-
-        
-
-    </style>
-</head>
-<body>
+@section('deskripsi')
     <div class="container col-6">
         <fieldset>
             <form class="form-pesan" method="post">
@@ -45,5 +24,4 @@
         </fieldset>
     </form>
         </div>
-</body>
-</html>
+@endsection
