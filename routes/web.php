@@ -57,3 +57,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/post', 'BlogController@post');
 Route::post('/insert', 'BlogController@insert');
+Route::get('/barang', 'BlogController@barang');
