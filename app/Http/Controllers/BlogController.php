@@ -81,34 +81,10 @@ class BlogController extends Controller
 
 		$post->save();
 		return view('post')->with('post',$post);
-		//---------------------------------------------------------------
-		// $judul = $request->input('Judul');
-        // $nama=$request->input('Nama');
-		// $target = $request->input('Target');
-		// $harga = $request->input('Harga');
-		// $file = $request->file('file');
-		// $tujuan_upload = 'img/gambar';
-		// $file->move($tujuan_upload,$file->getClientOriginalName());
-        // $data=array('Nama'=>$nama,'Judul'=>$judul,"Target"=>$target,"Harga"=>$harga);
-        // DB::table('buku')->insert($data);
-		// return redirect('/project/perpustakaan');
-		//-----------------------------------------------------------------
-		// $file = $request->file('file');
+	}
+	
+	public function barang(Request $request)
+	{
 		
-		// $extension=$file->getClientOriginalExtension();
-		// $nama_file = time()."_". $extension;
-			
-		// $tujuan_upload = 'img/gambar';
-		// $file->move($tujuan_upload,$nama_file);
-
-		// Post::create([
-		// 	'Nama' => $request->Nama,
-		// 	'Judul' => $request->Judul,
-		// 	'Target' => $request->Target,
-		// 	'Harga' => $request->Harga,
-		// 	'file' => $nama_file,
-		// ]);
-
-		// return redirect()->back();
-    }
+	}
 }

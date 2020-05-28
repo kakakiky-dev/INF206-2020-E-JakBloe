@@ -63,4 +63,23 @@
                 </ul>
             </div>
         </section>
+        <section class="startup_fuatures_area sec_pad">
+        <div class="container">
+            <div class="row">
+        @foreach($isi as $i)
+        <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="img/gambar/{{$i->file}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{$i->Judul}}</h5>
+                    <p class="card-text">Target {{$i->Target}} KG</p>
+                    <p class="card-text">Harga Rp.{{$i->Harga}}</p>
+                    <a href="/barang" class="btn btn-primary">Lihat</a>
+                </div>
+            </div>
+        </div>
+        @endforeach
+            </div>
+        </div>
+        </section>
         @endsection
