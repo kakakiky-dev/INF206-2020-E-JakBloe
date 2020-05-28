@@ -85,6 +85,9 @@ class BlogController extends Controller
 	
 	public function barang(Request $request)
 	{
-		
+		$search = $request->get('search');
+		$isi = DB::table('post')->where('id', '=',$search);
+        $isi = $isi->get();
+        return view('home',['isi'=>$isi]);
 	}
 }

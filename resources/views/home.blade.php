@@ -74,7 +74,9 @@
                     <h5 class="card-title">{{$i->Judul}}</h5>
                     <p class="card-text">Target {{$i->Target}} KG</p>
                     <p class="card-text">Harga Rp.{{$i->Harga}}</p>
-                    <a href="/barang" class="btn btn-primary">Lihat</a>
+                    <form action="/barang" method="get">
+                    <button class="btn btn-info" type="submit" name="search" value="{{$i->id}}">lihat</button>
+                    </form>
                 </div>
             </div>
         </div>
