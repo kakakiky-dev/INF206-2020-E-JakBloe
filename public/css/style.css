@@ -11592,7 +11592,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   margin-bottom: 30px;
 }
 
-.apply_form input[type="text"], .apply_form textarea, .apply_form .selectpickers {
+.apply_form input[type="text"], .apply_form input[type="number"], .apply_form textarea, .apply_form .selectpickers {
   border-radius: 4px;
   background-color: white;
   -webkit-box-shadow: 0px 2px 4px 0px rgba(12, 0, 46, 0.04);
@@ -11605,26 +11605,26 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   border: 1px solid #fff;
 }
 
-.apply_form input[type="text"]:focus, .apply_form textarea:focus, .apply_form .selectpickers:focus {
+.apply_form input[type="text"]:focus, .apply_form input[type="number"]:focus, .apply_form textarea:focus, .apply_form .selectpickers:focus {
   -webkit-box-shadow: 0px 10px 14px 0px rgba(12, 0, 46, 0.06);
   box-shadow: 0px 10px 14px 0px rgba(12, 0, 46, 0.06);
   border-color: #f2effc;
   outline: none;
 }
 
-.apply_form input[type="text"].placeholder, .apply_form textarea.placeholder, .apply_form .selectpickers.placeholder {
+.apply_form input[type="text"].placeholder, .apply_form input[type="number"].placeholder, .apply_form textarea.placeholder, .apply_form .selectpickers.placeholder {
   color: #9ca3b9;
 }
 
-.apply_form input[type="text"]:-moz-placeholder, .apply_form textarea:-moz-placeholder, .apply_form .selectpickers:-moz-placeholder {
+.apply_form input[type="text"]:-moz-placeholder, .apply_form input[type="number"]:-moz-placeholder, .apply_form textarea:-moz-placeholder, .apply_form .selectpickers:-moz-placeholder {
   color: #9ca3b9;
 }
 
-.apply_form input[type="text"]::-moz-placeholder, .apply_form textarea::-moz-placeholder, .apply_form .selectpickers::-moz-placeholder {
+.apply_form input[type="text"]::-moz-placeholder, .apply_form input[type="number"]::-moz-placeholder, .apply_form textarea::-moz-placeholder, .apply_form .selectpickers::-moz-placeholder {
   color: #9ca3b9;
 }
 
-.apply_form input[type="text"]::-webkit-input-placeholder, .apply_form textarea::-webkit-input-placeholder, .apply_form .selectpickers::-webkit-input-placeholder {
+.apply_form input[type="text"]::-webkit-input-placeholder, .apply_form input[type="number"]::-webkit-input-placeholder, .apply_form textarea::-webkit-input-placeholder, .apply_form .selectpickers::-webkit-input-placeholder {
   color: #9ca3b9;
 }
 
@@ -12303,7 +12303,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   margin-bottom: 30px;
 }
 
-.text_box input[type="text"], .text_box textarea, .text_box input[type="password"], .text_box input[type="email"] {
+.text_box input[type="text"], .text_box input[type="number"], .pilihan input[type="text"], .text_box textarea, .text_box input[type="password"], .text_box input[type="email"] {
   font: 400 15px/60px "Poppins", sans-serif;
   color: #222d39;
   height: 60px;
@@ -12316,23 +12316,23 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   padding-left: 30px;
 }
 
-.text_box input[type="text"].placeholder, .text_box textarea.placeholder, .text_box input[type="password"].placeholder, .text_box input[type="email"].placeholder {
+.text_box input[type="text"].placeholder, .text_box input[type="number"].placeholder, .text_box textarea.placeholder, .text_box input[type="password"].placeholder, .text_box input[type="email"].placeholder {
   color: #9ca3b9;
 }
 
-.text_box input[type="text"]:-moz-placeholder, .text_box textarea:-moz-placeholder, .text_box input[type="password"]:-moz-placeholder, .text_box input[type="email"]:-moz-placeholder {
+.text_box input[type="text"]:-moz-placeholder, .text_box input[type="number"]:-moz-placeholder, .text_box textarea:-moz-placeholder, .text_box input[type="password"]:-moz-placeholder, .text_box input[type="email"]:-moz-placeholder {
   color: #9ca3b9;
 }
 
-.text_box input[type="text"]::-moz-placeholder, .text_box textarea::-moz-placeholder, .text_box input[type="password"]::-moz-placeholder, .text_box input[type="email"]::-moz-placeholder {
+.text_box input[type="text"]::-moz-placeholder, .text_box input[type="number"]::-moz-placeholder, .text_box textarea::-moz-placeholder, .text_box input[type="password"]::-moz-placeholder, .text_box input[type="email"]::-moz-placeholder {
   color: #9ca3b9;
 }
 
-.text_box input[type="text"]::-webkit-input-placeholder, .text_box textarea::-webkit-input-placeholder, .text_box input[type="password"]::-webkit-input-placeholder, .text_box input[type="email"]::-webkit-input-placeholder {
+.text_box input[type="text"]::-webkit-input-placeholder, .text_box input[type="number"]::-webkit-input-placeholder, .text_box textarea::-webkit-input-placeholder, .text_box input[type="password"]::-webkit-input-placeholder, .text_box input[type="email"]::-webkit-input-placeholder {
   color: #9ca3b9;
 }
 
-.text_box input[type="text"]:focus, .text_box textarea:focus, .text_box input[type="password"]:focus, .text_box input[type="email"]:focus {
+.text_box input[type="text"]:focus, .text_box input[type="number"]:focus, .text_box textarea:focus, .text_box input[type="password"]:focus, .text_box input[type="email"]:focus {
   border-color: #f2effc;
   -webkit-box-shadow: 0px 10px 14px 0px rgba(12, 0, 46, 0.06);
   box-shadow: 0px 10px 14px 0px rgba(12, 0, 46, 0.06);

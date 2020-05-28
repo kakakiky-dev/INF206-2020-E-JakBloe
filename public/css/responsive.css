@@ -3261,7 +3261,7 @@
     .sign_info {
         padding: 30px 15px;
     }
-    .text_box input[type="text"], .text_box textarea, .text_box input[type="password"]{
+    .text_box input[type="text"], .text_box input[type="number"], .text_box textarea, .text_box input[type="password"]{
         padding-left: 10px;
     }
     .payment_testimonial_info .testimonial_content .icon{
