@@ -55,4 +55,5 @@ Route::get('/pembayaran', 'BlogController@pembayaran');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/post', 'HomeController@post')->name('post');
+Route::get('/post', 'BlogController@post');
+Route::post('/insert', 'BlogController@insert');

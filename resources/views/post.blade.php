@@ -19,7 +19,7 @@
                     <p class="f_400 f_size_18 l_height34">Lengkapi Data Berikut<br>Untuk Membuat Postingan Baru </p>
                 </div>
                 <fieldset>
-                                <form action="#" class="login-form sign-in-form" method="post">
+                                <form action="/insert" class="login-form sign-in-form" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group text_box">
                                         <label class="f_p text_c f_400 sr-only">Nama</label>
@@ -38,11 +38,11 @@
                                         <input type="number" required="required" name="Harga" id="Harga" placeholder="Harga Barang / kg">
                                     </div>
                                     <div class="form-group text_box">
-                                    <input class="form-group text_box" type="file" id="file"> Masukkan Gambar Postingan (Max 5 Mb):
+                                    <input class="form-group text_box" type="file" id="file" name="file"> Masukkan Gambar Postingan (Max 5 Mb):
                                     </div>
                                         <button class="btn btn-lg btn-success btn-block" type="submit" style="border-radius: 40px; width: 300px; padding: 10px;margin: 5px auto;">Buat Postingan</button>
-                                    </form>
-                    </fieldset>
-                </div>
+                                </form>
+                </fieldset>
+            </div>
 </section>
 @endsection
