@@ -17,7 +17,10 @@
                             <h2 class="f_700 f_size_40 l_height50 w_color mb_20 wow fadeInRight" data-wow-delay="0.3s">Gabung Bersama<br><span>JakBloe</span></h2>
                             <p class="f_400 w_color l_height28 wow fadeInRight" data-wow-delay="0.4s">JakBloe adalah sebuah website yang memungkinkan kamu untuk membeli barang secara massal bersama dengan pedagang lainnya, sehingga barang yang kamu beli menjadi lebih murah.</p>
                             <div class="action_btn d-flex align-items-center mt_40 wow fadeInRight" data-wow-delay="0.6s">
-                                <a href="/register" class="btn_hover app_btn">Daftar <i class="ti-arrow-right"></i></a>
+                            @if(Auth::user())
+                            @else
+                            <a href="/register" class="btn_hover app_btn">Daftar <i class="ti-arrow-right"></i></a>
+                            @endif
                             </div>
                         </div>
                     </div>
