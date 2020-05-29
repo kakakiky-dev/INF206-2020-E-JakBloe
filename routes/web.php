@@ -40,6 +40,9 @@ Route::get('/konfirmasi', function () {
 Route::get('/pembayaran', function () {
     return view('pembayaran');
 });
+Route::get('/edit', function () {
+    return view('edit');
+});
 
 
 // route blog
@@ -52,9 +55,15 @@ Route::get('/profile', 'BlogController@profile');
 Route::get('/konfirmasi', 'BlogController@konfirmasi');
 Route::get('/pembayaran', 'BlogController@pembayaran');
 
+//Rout upload Profile
+Route::get('/upload', 'BlogController@upload');
+Route::post('/upload/proses', 'BlogController@proses_upload');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/post', 'BlogController@post');
 Route::post('/insert', 'BlogController@insert');
 Route::get('/barang', 'BlogController@barang');
+
+//Update User Profile

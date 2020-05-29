@@ -5,8 +5,8 @@
             <div class="parallax-effect" style="background: url(img/new/company.jpg);"></div>
             <div class="container">
                 <div class="company_banner_content">
-                    <h6>21 May 2020 / Kota Banda Aceh </h6>
-                    <img src="img/kiky2.jpeg" alt="Avatar" style="border-radius: 50%;" width="150" height="150">
+                    <img src="img/kiky2.jpeg" alt="Avatar" style="border-radius: 50%; margin-bottom:20px;" width="150" height="150">
+                    <h6>{{ date('Y-m-d') }}</h6>
                     <h2>Selamat Datang Di JakBloe <br>{{ Auth::user()->name }}</h2>
                     <p class="f_400 w_color f_size_16 l_height26">Silahkan atur profile kamu pada halaman ini</p>
                 </div>
@@ -24,7 +24,8 @@
                             <div class="number">1</div>
                             <div class="separator"></div>
                             <div class="new_service_content">
-                                <img src="img/home-10/icon1.png" alt="">
+                                <a href="/post">
+                                <img src="img/home-10/icon1.png" href="/post" alt=""></a>
                                 <h4 class="f_size_20 f_p t_color f_500">Buat Postingan</h4>
                                 <p class="f_400 f_size_15 mb-0">Buat postingan untuk membeli stok barang yang kamu inginkan</p>
                             </div>
@@ -46,7 +47,8 @@
                             <div class="number">3</div>
                             <div class="separator"></div>
                             <div class="new_service_content">
-                                <img src="img/home-10/icon3.png" alt="">
+                                <a href="/password/reset">
+                                <img src="img/home-10/icon3.png" alt=""></a>
                                 <h4 class="f_size_20 f_p t_color f_500">Reset Password</h4>
                                 <p class="f_400 f_size_15 mb-0">Jaga keamanan akun kamu dengan memperbaharui sandi menjadi lebih kuat</p>
                             </div>
