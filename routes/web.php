@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Model;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,9 +42,9 @@ Route::get('/konfirmasi', function () {
 Route::get('/pembayaran', function () {
     return view('pembayaran');
 });
-Route::get('/edit', function () {
-    return view('edit');
-});
+// Route::get('/profile/edit', function () {
+//     return view('edit');
+// });
 
 
 // route blog
@@ -54,10 +56,11 @@ Route::get('/login', 'BlogController@login');
 Route::get('/profile', 'BlogController@profile');
 Route::get('/konfirmasi', 'BlogController@konfirmasi');
 Route::get('/pembayaran', 'BlogController@pembayaran');
+Route::get('/edit', 'BlogController@edit');
 
 //Rout upload Profile
-Route::get('/upload', 'BlogController@upload');
-Route::post('/upload/proses', 'BlogController@proses_upload');
+// Route::get('/upload', 'BlogController@upload');
+// Route::post('/upload/proses', 'BlogController@proses_upload');
 
 Auth::routes();
 
@@ -67,3 +70,4 @@ Route::post('/insert', 'BlogController@insert');
 Route::get('/barang', 'BlogController@barang');
 
 //Update User Profile
+Route::patch('/edit', 'BlogController@update');
