@@ -5,10 +5,17 @@
             <div class="parallax-effect" style="background: url(img/new/company.jpg);"></div>
             <div class="container">
                 <div class="company_banner_content">
-                    <img src="img/kiky2.jpeg" alt="Avatar" style="border-radius: 50%; margin-bottom:20px;" width="150" height="150">
+                    @if (Auth::user()->file == '')
+                    <img src="{{ asset('img/login_img.png') }}" alt="Avatar" style="border-radius: 50%; margin-bottom:20px;" width="150" height="150">
+                    @else
+                    <img src="{{ asset('img/avatar/'.Auth::user()->file) }}" alt="Avatar" style="border-radius: 50%; margin-bottom:20px;" width="150" height="150">
+                    @endif
                     <h6>{{ date('Y-m-d') }}</h6>
                     <h2>Selamat Datang Di JakBloe <br>{{ Auth::user()->name }}</h2>
-                    <p class="f_400 w_color f_size_16 l_height26">Silahkan atur profile kamu pada halaman ini</p>
+
+                    @if (Auth::user()->motto != '')
+                    <p class="f_400 w_color f_size_16 l_height26">"{{ Auth::user()->motto }}"</p>
+                    @endif
                 </div>
             </div>
         </section>
@@ -36,8 +43,8 @@
                             <div class="number">2</div>
                             <div class="separator"></div>
                             <div class="new_service_content">
-                            <a href="/edit">
-                                <img src="img/home-10/icon2.png" alt="">
+                            <a href="{{ route('blog.edit', Auth::user()->id) }}">
+                                <img src="img/home-10/icon2.png" alt=""></a>
                                 <h4 class="f_size_20 f_p t_color f_500">Perbaharui Profile</h4>
                                 <p class="f_400 f_size_15 mb-0">Ubah foto dan data profile kamu di sini</p>
                             </div>
