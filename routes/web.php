@@ -53,10 +53,11 @@ Route::get('/disclaimer', 'BlogController@disclaimer');
 Route::get('/privacy', 'BlogController@privacy');
 Route::get('/register', 'BlogController@register');
 Route::get('/login', 'BlogController@login');
-Route::get('/profile', 'BlogController@profile');
+Route::get('/profile', 'BlogController@profile')->name('blog.profile');
 Route::get('/konfirmasi', 'BlogController@konfirmasi');
 Route::get('/pembayaran', 'BlogController@pembayaran');
-Route::get('/edit', 'BlogController@edit');
+Route::get('/edit/{id}', 'BlogController@edit')->name('blog.edit');
+Route::post('/edit/{id}', 'BlogController@update')->name('blog.update');
 
 //Rout upload Profile
 // Route::get('/upload', 'BlogController@upload');
