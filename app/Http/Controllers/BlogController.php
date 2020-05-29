@@ -60,22 +60,32 @@ class BlogController extends Controller
 		return view('post');
 	}
 
-	public function edit()
+	public function edit($id)
 	{
-		return view('edit');
+		$user=User::find($id);
+
+		return view('edit', compact('user'));
 	}
 
-	public function update(Request $request, User $user)
+	public function update(Request $data, $id)
 	{
-		DB::table('users')->where('id',$request->id)
-				->update([
-					'name' => $request->name,
-					'email' => $request->email,
-					'Nomorhp' => $request->Nomorhp,
-					'Motto' => $request->Motto
-				]);
-				
-		return redirect('/edit')->with('status', 'Profile Berhasil di Update!');
+		$user = User::find($id);
+		$user->name = $data->input('name');
+		$user->email = $data->input('email');
+		$user->nohp = $data->input('Nomorhp');
+		$user->motto = $data->input('Motto');
+
+		if ($data->hasfile('file')) {
+			$gambar = $data->file('file');
+			$extension = $gambar->getClientOriginalExtension();
+			$filename = time() . '.' . $extension;
+			$gambar->move('img/avatar', $filename);
+		} else {
+			$filename = '';
+		}
+		$user->file = $filename;
+		$user->save();
+		return redirect()->route('blog.profile');
 	}
 
 	public function insert(Request $request)
