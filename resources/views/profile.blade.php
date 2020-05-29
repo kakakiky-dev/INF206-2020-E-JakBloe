@@ -36,6 +36,7 @@
                             <div class="number">2</div>
                             <div class="separator"></div>
                             <div class="new_service_content">
+                            <a href="/edit">
                                 <img src="img/home-10/icon2.png" alt="">
                                 <h4 class="f_size_20 f_p t_color f_500">Perbaharui Profile</h4>
                                 <p class="f_400 f_size_15 mb-0">Ubah foto dan data profile kamu di sini</p>

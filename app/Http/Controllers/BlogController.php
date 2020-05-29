@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Post;
+use App\User;
 
 class BlogController extends Controller
 {
@@ -57,6 +58,24 @@ class BlogController extends Controller
 	public function post()
 	{
 		return view('post');
+	}
+
+	public function edit()
+	{
+		return view('edit');
+	}
+
+	public function update(Request $request, User $user)
+	{
+		DB::table('users')->where('id',$request->id)
+				->update([
+					'name' => $request->name,
+					'email' => $request->email,
+					'Nomorhp' => $request->Nomorhp,
+					'Motto' => $request->Motto
+				]);
+				
+		return redirect('/edit')->with('status', 'Profile Berhasil di Update!');
 	}
 
 	public function insert(Request $request)

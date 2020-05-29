@@ -13,23 +13,24 @@
                     <p class="f_400 f_size_18 l_height34">Silahkan perbaharui profile Dengan data yang valid</p>
                 </div>
                 <fieldset>
-                                <form action="/insert" class="login-form sign-in-form" method="post" enctype="multipart/form-data">
+                                <form action="/edit" class="login-form sign-in-form" method="post" enctype="multipart/form-data">
+                                @method ('patch')
                                     @csrf
                                     <div class="form-group text_box">
                                         <label class="f_p text_c f_400 sr-only">Nama</label>
-                                        <input type="text" required="required" name="name" id="name" placeholder="Nama">
+                                        <input type="text" required="required" name="name" id="name" placeholder="Nama" value="{{ Auth::user()->name }}">
                                     </div>
                                     <div class="form-group text_box">
                                         <label class="f_p text_c f_400 sr-only">Email</label>
-                                        <input type="text" required="required" name="email" id="email" placeholder="Email">
+                                        <input type="text" required="required" name="email" id="email" placeholder="Email" value="{{ Auth::user()->email }}">
                                     </div>
                                     <div class="form-group text_box">
                                         <label class="f_p text_c f_400 sr-only">Nomor Handphone</label>
-                                        <input type="number" required="required" name="Nomorhp" id="Nomorhp" placeholder="Nomor Handphone">
+                                        <input type="number" required="required" name="Nomorhp" id="Nomorhp" placeholder="Nomor Handphone" value="{{ Auth::user()->Nomorhp }}">
                                     </div>
                                     <div class="form-group text_box">
                                         <label class="f_p text_c f_400 sr-only">Motto</label>
-                                        <input type="number" required="required" name="Motto" id="Motto" placeholder="Motto Kamu">
+                                        <input type="text" required="required" name="Motto" id="Motto" placeholder="Motto Kamu" value="{{ Auth::user()->Motto }}">
                                     </div>
                                     <div class="form-group text_box">
                                     <input class="form-group text_box" type="file" id="file" name="file"> Upload Foto Profile
