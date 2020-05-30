@@ -64,8 +64,10 @@
 						<br>
 						<div class="row pr_button">
 							<form action="/pembayaran" method="get"><button type="submit" name="search" value="{{$i->id}}" class="cart_btn">Beli sekarang</button></form>&nbsp;&nbsp;<form action="/pembeli" method="get"><button type="submit" name="search" value="{{$i->id}}" class="cart_btn">Daftar Pembeli</button></form>
-							
-						</div>
+						</div>&nbsp;
+						<div class="progress">
+						<div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
 					</div>
                     </div>
                 </div>
