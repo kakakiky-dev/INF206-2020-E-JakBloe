@@ -82,9 +82,10 @@ class BlogController extends Controller
 		return view('pembayaran',['isi'=>$isi]);
 	}
 
-	public function post()
+	public function post($id)
 	{
-		return view('post');
+		$user = User::find($id);
+		return view('post', compact('user'));
 	}
 
 	public function edit($id)
@@ -118,7 +119,9 @@ class BlogController extends Controller
 	public function insert(Request $request)
 	{
 		$post=new Post();
-		$post->Nama=$request->input('Nama');
+		$pengguna = auth()->user();
+		$namanya= ($pengguna->name);
+		$post->Nama=$namanya;
 		$post->Judul=$request->input('Judul');
 		$post->Target=$request->input('Target');
 		$post->Harga=$request->input('Harga');
@@ -136,7 +139,7 @@ class BlogController extends Controller
 		}
 
 		$post->save();
-		return view('post')->with('post',$post);
+		return redirect('home')->with('post',$post);
 	}
 	
 	public function barang(Request $request)

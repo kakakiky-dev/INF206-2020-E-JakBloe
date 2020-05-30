@@ -31,7 +31,7 @@
                             <div class="number">1</div>
                             <div class="separator"></div>
                             <div class="new_service_content">
-                                <a href="/post">
+                                <a href="{{ route('blog.post', Auth::user()->id) }}">
                                 <img src="img/home-10/icon1.png" href="/post" alt=""></a>
                                 <h4 class="f_size_20 f_p t_color f_500">Buat Postingan</h4>
                                 <p class="f_400 f_size_15 mb-0">Buat postingan untuk membeli stok barang yang kamu inginkan</p>
