@@ -74,3 +74,4 @@ Route::post('/gambarkonfirmasi', 'BlogController@gambarkonfirmasi');
 
 //Update User Profile
 Route::patch('/edit', 'BlogController@update');
+Route::get('/cari', 'BlogController@cari');
