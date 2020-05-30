@@ -71,7 +71,7 @@
                         </li>
                         @if(Auth::guest())
                         @else
-                        <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/post">Buat Post</a>
+                        <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="{{ route('blog.post', Auth::user()->id) }}">Buat Post</a>
                         </li>
                         @endif
                         @if (Auth::guest())
