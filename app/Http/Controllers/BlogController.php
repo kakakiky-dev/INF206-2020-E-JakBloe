@@ -162,4 +162,12 @@ class BlogController extends Controller
 		$isi = $isi->get();
 		return view('pembeli',['isi'=>$isi]);
 	}
+
+	public function cari(Request $request)
+	{
+		$cari = $request->get('cari');
+        $isi = DB::table('post')->where('Judul', 'like', '%' .$cari. '%');
+        $isi = $isi->get();
+        return view('home',['isi'=>$isi]);
+	}
 }
