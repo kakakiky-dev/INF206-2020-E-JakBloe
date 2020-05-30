@@ -85,11 +85,6 @@
                         </li>
                         @endif
                         </li>
-
-
-
-
-
                     </ul>
 
                     <ul class="navbar-nav ml-auto">
@@ -105,13 +100,9 @@
                             </div>
                             </form>
                         </li>
-                        <ul>
-
-
+                    </ul>
                 </div>
-
-
-
+                
                 @if(Auth::user())
                 @else
                 <a class="btn_get btn_hover btn_get_radious hidden-sm hidden-xs" href="\login">Masuk</a>
