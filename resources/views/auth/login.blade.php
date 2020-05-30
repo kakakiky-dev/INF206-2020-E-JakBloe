@@ -44,32 +44,35 @@
                     </button>
 
                     <div class="collapse navbar-collapse mt-2" id="navbarSupportedContent">
-                        <ul class="navbar-nav menu w_menu pl_100">
-                            <li class="nav-item dropdown submenu mega_menu mega_menu_two active">
-                                <a class="nav-link dropdown-toggle" href="/home" role="button" aria-haspopup="true" aria-expanded="false">
-                                    Home
-                                </a>
-                            </li>
-                            <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/about">About Us</a>
-                            </li>
-                            <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/disclaimer">Disclaimer</a>
-                            </li>
-                            <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/privacy">Privacy Policy</a>
-                            </li>
-                            <li class="nav-item dropdown submenu">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                    Tools
+                    <ul class="navbar-nav menu w_menu pl_100">
+                        <li class="nav-item dropdown submenu mega_menu mega_menu_two active">
+                            <a class="nav-link dropdown-toggle" href="/home" role="button" aria-haspopup="true" aria-expanded="false">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown submenu active">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ketentuan
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="shop-grid.html" class="nav-link">Simulasi Pajak</a></li>
-                                    <li class="nav-item"><a href="shop-list.html" class="nav-link">Simulasi PPH</a></li>
-                                    <li class="nav-item"><a href="product-details-1.html" class="nav-link">Simulasi PBB</a></li>
-                                    
+                                    <li class="nav-item"><a href="/privacy" class="nav-link">Privacy Policy</a></li>
+                                    <li class="nav-item"><a href="/disclaimer" class="nav-link">Disclaimer</a></li>
                                 </ul>
                             </li>
-                            </li>
-
-                        </ul>
+                        <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/about">About Us</a>
+                        </li>
+                        @if(Auth::guest())
+                        @else
+                        <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="{{ route('blog.post', Auth::user()->id) }}">Buat Post</a>
+                        </li>
+                        @endif
+                        @if (Auth::guest())
+                        @else
+                        <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/profile">Profile Saya</a>
+                        </li>
+                        @endif
+                        </li>
+                    </ul>
                     </div>
                         <div class="p-1 bg-light " style="border-radius: 30px ">
                             <div class="input-group"  >
