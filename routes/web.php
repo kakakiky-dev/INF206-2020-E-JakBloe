@@ -68,7 +68,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/post', 'BlogController@post');
 Route::post('/insert', 'BlogController@insert');
-Route::get('/barang', 'BlogController@barang');
+Route::post('/barang', 'BlogController@barang');
+Route::get('/pembeli', 'BlogController@pembeli');
+Route::post('/gambarkonfirmasi', 'BlogController@gambarkonfirmasi');
 
 //Update User Profile
 Route::patch('/edit', 'BlogController@update');

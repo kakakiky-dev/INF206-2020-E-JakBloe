@@ -12,26 +12,24 @@
                     <p class="f_400 f_size_18 l_height34">Form harus diisi dengan data yang valid dan sesuai</p>
                 </div>
                 <fieldset>
-                                <form action="#" class="login-form sign-in-form" method="post">
+                                <form action="/barang" class="login-form sign-in-form" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group text_box">
-                                        <label class="f_p text_c f_400 sr-only">Nama</label>
-                                        <input type="text" required="required" name="Nama" id="Nama" placeholder="Nama Pemesan">
-                                    </div>
-                                    <div class="form-group text_box">
                                         <label class="f_p text_c f_400 sr-only">Alamat</label>
-                                        <input type="text" required="required" name="Alamat" id="Alamat" placeholder="Alamat">
+                                        <input type="text" name="alamat" id="Alamat" placeholder="Alamat">
                                     </div>
                                     <div class="form-group text_box">
                                         <label class="f_p text_c f_400 sr-only">Nomor Handphone</label>
-                                        <input type="number" required="required" name="Handphone" id="Handphone" placeholder="Nomor Handphone / Whatsapp">
+                                        <input type="number" required="required" name="hp" id="Handphone" placeholder="Nomor Handphone / Whatsapp">
                                     </div>
                                     <div class="form-group text_box">
                                         <label class="f_p text_c f_400 sr-only">Jumlah</label>
-                                        <input type="number" required="required" name="Jumlah" id="Jumlah" placeholder="Jumlah yang ingin dipesan">
+                                        <input type="number" required="required" name="dibeli" id="Jumlah" placeholder="Jumlah yang ingin dipesan">
                                     </div>
                                     <br>
-                                        <button class="btn btn-lg btn-success btn-block" type="submit" style="border-radius: 40px; width: 300px; padding: 10px;margin: 5px auto;">BAYAR</button>
+                                        @foreach($isi as $i)
+                                        <button class="btn btn-lg btn-success btn-block" name="search" value="{{$i->id}}" type="submit" style="border-radius: 40px; width: 300px; padding: 10px;margin: 5px auto;">BAYAR</button>
+                                        @endforeach
                                         <p class="f_400 f_size_18 l_height34" align="center">Silahkan klik tombol Bayar <br> untuk lanjut ke tahap Pembayaran</p>
                                     </form>
                     </fieldset>

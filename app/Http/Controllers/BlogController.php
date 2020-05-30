@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Post;
 use App\User;
+use App\konfirmasi;
 
 class BlogController extends Controller
 {
@@ -45,14 +46,40 @@ class BlogController extends Controller
 		return view('profile');
 	}
 
-	public function konfirmasi()
+	public function konfirmasi(Request $request)
 	{
-		return view('konfirmasi');
+		$search = $request->get('search');
+		$isi = DB::table('post')->where('id', '=',$search);
+		$isi = $isi->get();
+		return view('konfirmasi',['isi'=>$isi]);
 	}
 
-	public function pembayaran()
+	public function gambarkonfirmasi(Request $request)
 	{
-		return view('pembayaran');
+		$post= new konfirmasi();
+		$post->id=$request->input('search');
+		if($request->hasfile('file'))
+		{
+			$gambar=$request->file('file');
+			$extension=$gambar->getClientOriginalExtension();
+			$filename=time().'.'. $extension;
+			$gambar->move('img/konfirmasi', $filename);
+			$post->file=$filename;
+		}else{
+			return $request;
+			$post->file='';
+		}
+
+		$post->save();
+		return redirect('home')->with('post',$post);
+	}
+
+	public function pembayaran(Request $request)
+	{
+		$search = $request->get('search');
+		$isi = DB::table('post')->where('id', '=',$search);
+		$isi = $isi->get();
+		return view('pembayaran',['isi'=>$isi]);
 	}
 
 	public function post()
@@ -114,9 +141,25 @@ class BlogController extends Controller
 	
 	public function barang(Request $request)
 	{
+		$user = auth()->user();
+		$pembeli= ($user->name);
+		$gambar= ($user->file);
+		$dibeli = $request->get('dibeli');
+		$alamat = $request->get('alamat');
+		$hp = $request->get('hp');
 		$search = $request->get('search');
 		$isi = DB::table('post')->where('id', '=',$search);
-        $isi = $isi->get();
-        return view('home',['isi'=>$isi]);
+		$isi = $isi->get();
+		$dataform = array('idBarang' => $search, 'pembeli' => $pembeli,'dibeli' => $dibeli,'gambar' => $gambar,'alamat' =>$alamat, 'no_hp' =>$hp);
+		DB::table('pembeli')->insert($dataform);
+		return view('konfirmasi',['isi'=>$isi]);
+	}
+
+	public function pembeli(Request $request)
+	{
+		$search = $request->get('search');
+		$isi = DB::table('pembeli')->where('idBarang', '=',$search);
+		$isi = $isi->get();
+		return view('pembeli',['isi'=>$isi]);
 	}
 }

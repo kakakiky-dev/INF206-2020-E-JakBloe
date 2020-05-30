@@ -63,9 +63,8 @@
 						</div>
 						<br>
 						<div class="pr_button">
-							<form action="/barang" method="get">
-								<button type="submit" name="add-to-cart" value="{{$i->id}}" class="cart_btn">Beli sekarang</button>&nbsp;&nbsp;<button type="submit" name="add-to-cart" value="{{$i->id}}" class="cart_btn">Daftar Pembeli</button>
-							</form>
+							<form action="/pembayaran" method="get"><button type="submit" name="search" value="{{$i->id}}" class="cart_btn">Beli sekarang</button></form>&nbsp;&nbsp;<form action="/pembeli" method="get"><button type="submit" name="search" value="{{$i->id}}" class="cart_btn">Daftar Pembeli</button></form>
+							
 						</div>
 					</div>
                     </div>
