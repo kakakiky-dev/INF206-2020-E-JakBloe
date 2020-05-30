@@ -63,15 +63,20 @@
                                 Home
                             </a>
                         </li>
+                        <li class="nav-item dropdown submenu active">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ketentuan
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a href="/privacy" class="nav-link">Privacy Policy</a></li>
+                                    <li class="nav-item"><a href="/disclaimer" class="nav-link">Disclaimer</a></li>
+                                </ul>
+                            </li>
                         <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/about">About Us</a>
-                        </li>
-                        <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/disclaimer">Disclaimer</a>
-                        </li>
-                        <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/privacy">Privacy Policy</a>
                         </li>
                         @if(Auth::guest())
                         @else
-                        <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/post">Buat Post</a>
+                        <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="{{ route('blog.post', Auth::user()->id) }}">Buat Post</a>
                         </li>
                         @endif
                         @if (Auth::guest())
@@ -80,31 +85,24 @@
                         </li>
                         @endif
                         </li>
-
-
-
-
-
                     </ul>
 
                     <ul class="navbar-nav ml-auto">
+                        <form action="cari" method="get" enctype="multipart/form-data">
                         <li class="search-res">
                             <div class="p-1 bg-light mb-1" style="border-radius: 30px ">
                                 <div class="input-group">
-                                    <input type="search" placeholder="Mau Cari apa?" aria-describedby="button-addon1" class="form-control border-0 bg-light" style="border-radius: 30px ">
+                                    <input type="search" name="cari" placeholder="Mau Cari apa?" aria-describedby="button-addon1" class="form-control border-0 bg-light" style="border-radius: 30px ">
                                     <div class="input-group-append">
                                         <button id="button-addon1" type="submit" class="btn btn-link " style="color: #17d1a6"><i class="fa fa-search"></i></button>
                                     </div>
                                 </div>
                             </div>
+                            </form>
                         </li>
-                        <ul>
-
-
+                    </ul>
                 </div>
-
-
-
+                
                 @if(Auth::user())
                 @else
                 <a class="btn_get btn_hover btn_get_radious hidden-sm hidden-xs" href="\login">Masuk</a>
@@ -129,7 +127,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-sm-6">
                             <div class="f_widget company_widget">
-                                <a href="index.html" class="f-logo"><img src="img/jakbloewhite1.png" srcset="img/logo-3-2x.png 2x" alt="logo"></a>
+                                <a class="f-logo"><img src="{{asset('img/jakbloewhite1.png')}}" srcset="img/logo-3-2x.png 2x" alt="logo"></a>
                                 <p class="mt_40">Jakbloe adalah sebuah website sebagai wadah untuk membeli barang secara massal. Sehingga harga barang yang didapatkan menjadi lebih murah. Ayo segera bergabung bersama kami!<br>
                                     <h6 style="color:white;">Copyright © 2020 Jakbloe.com</h6>
                                 </p>
