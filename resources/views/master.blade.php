@@ -63,11 +63,16 @@
                                 Home
                             </a>
                         </li>
+                        <li class="nav-item dropdown submenu active">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ketentuan
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a href="/privacy" class="nav-link">Privacy Policy</a></li>
+                                    <li class="nav-item"><a href="/disclaimer" class="nav-link">Disclaimer</a></li>
+                                </ul>
+                            </li>
                         <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/about">About Us</a>
-                        </li>
-                        <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/disclaimer">Disclaimer</a>
-                        </li>
-                        <li class="dropdown submenu nav-item"><a title="" class="dropdown-toggle nav-link" role="button" aria-haspopup="true" aria-expanded="false" href="/privacy">Privacy Policy</a>
                         </li>
                         @if(Auth::guest())
                         @else
