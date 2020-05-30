@@ -66,8 +66,8 @@ Route::post('/edit/{id}', 'BlogController@update')->name('blog.update');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/post', 'BlogController@post');
-Route::post('/insert', 'BlogController@insert');
+Route::get('/post/{id}', 'BlogController@post')->name('blog.post');
+Route::post('/insert', 'BlogController@insert')->name('blog.insert');
 Route::post('/barang', 'BlogController@barang');
 Route::get('/pembeli', 'BlogController@pembeli');
 Route::post('/gambarkonfirmasi', 'BlogController@gambarkonfirmasi');

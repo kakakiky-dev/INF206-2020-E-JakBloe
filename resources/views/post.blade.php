@@ -12,11 +12,11 @@
                     <p class="f_400 f_size_18 l_height34">Lengkapi Data Berikut<br>Untuk Membuat Postingan Baru </p>
                 </div>
                 <fieldset>
-                                <form action="/insert" class="login-form sign-in-form" method="post" enctype="multipart/form-data">
+                                <form action="{{route('blog.insert', $user->id)}}" class="login-form sign-in-form" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group text_box">
                                         <label class="f_p text_c f_400 sr-only">Nama</label>
-                                        <input type="text" required="required" name="Nama" id="Nama" placeholder="Nama">
+                                        <input type="text" name="name" id="Nama" placeholder="Nama" value="{{ $user->name }}" readonly>
                                     </div>
                                     <div class="form-group text_box">
                                         <label class="f_p text_c f_400 sr-only">Judul Postingan</label>
