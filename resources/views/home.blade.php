@@ -62,7 +62,7 @@
                                 <span class="woocommerce-Price-currencySymbol"></span>Harga Rp {{$i->Harga}}/kg |</span></ins>
 						</div>
 						<br>
-						<div class="pr_button">
+						<div class="row pr_button">
 							<form action="/pembayaran" method="get"><button type="submit" name="search" value="{{$i->id}}" class="cart_btn">Beli sekarang</button></form>&nbsp;&nbsp;<form action="/pembeli" method="get"><button type="submit" name="search" value="{{$i->id}}" class="cart_btn">Daftar Pembeli</button></form>
 							
 						</div>

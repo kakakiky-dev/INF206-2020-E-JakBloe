@@ -7,7 +7,7 @@
             @foreach($isi as $i)
 			<div class="col-sm">
 				<div class="card" style="width: 18rem;">
-					<img class="card-img-top" src="img/gambar/{{$i->gambar}}" alt="Card image cap">
+					<img class="card-img-top" src="img/avatar/{{$i->gambar}}" alt="Card image cap">
 					<div class="card-body">
 						<h5 class="card-title">{{$i->pembeli}}</h5>
 						<p class="card-text">Target {{$i->dibeli}} KG</p>
