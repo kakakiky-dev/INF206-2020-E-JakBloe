@@ -131,7 +131,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-sm-6">
                             <div class="f_widget company_widget">
-                                <a href="index.html" class="f-logo"><img src="img/jakbloewhite1.png" srcset="img/logo-3-2x.png 2x" alt="logo"></a>
+                                <a class="f-logo"><img src="{{asset('img/jakbloewhite1.png')}}" srcset="img/logo-3-2x.png 2x" alt="logo"></a>
                                 <p class="mt_40">Jakbloe adalah sebuah website sebagai wadah untuk membeli barang secara massal. Sehingga harga barang yang didapatkan menjadi lebih murah. Ayo segera bergabung bersama kami!<br>
                                     <h6 style="color:white;">Copyright © 2020 Jakbloe.com</h6>
                                 </p>
