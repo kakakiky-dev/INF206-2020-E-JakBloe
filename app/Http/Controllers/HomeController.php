@@ -25,13 +25,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $isi = DB::table('post')->get();
+        $isi = DB::table('post')->orderBy("created_at","desc")->get();
 
         return view('home',['isi'=>$isi]);
     }
 
     public function post()
 	{
-		return view('post');
+        return view('post');
+        
 	}
 }
