@@ -24,43 +24,4 @@
                 </div>
             </div>
         </section>
-        <section class="startup_fuatures_area sec_pad">
-            <div class="container">
-                <div class="sec_title mb_70 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-                    <h2 class="f_p f_size_30 l_height40 f_600 t_color text-center">Selamat Datang di Website<br> JakBloe</h2>
-                </div>
-                <ul class="nav nav-tabs startup_tab" id="myTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="market-tab" data-toggle="tab" href="#market" role="tab" aria-controls="market" aria-selected="true">
-                            <span class="icon"><i class="icon-cloud-upload"></i></span>
-                            <h3>Marketing<br> Cloud</h3>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="app-tab" data-toggle="tab" href="#app" role="tab" aria-controls="app" aria-selected="false">
-                            <span class="icon"><i class="icon-screen-tablet"></i></span>
-                            <h3>Commerce<br> Apps</h3>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="hubstaff-tab" data-toggle="tab" href="#hubstaff" role="tab" aria-controls="hubstaff" aria-selected="false">
-                            <span class="icon"><i class="icon-graduation"></i></span>
-                            <h3>Hubstaff<br> App</h3>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="engine-tab" data-toggle="tab" href="#engine" role="tab" aria-controls="engine" aria-selected="false">
-                            <span class="icon"><i class="icon-refresh"></i></span>
-                            <h3>Automation<br> Engine</h3>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="business-tab" data-toggle="tab" href="#business" role="tab" aria-controls="business" aria-selected="false">
-                            <span class="icon"><i class="icon-bulb"></i></span>
-                            <h3>Business<br> Intellegence</h3>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
         @endsection
