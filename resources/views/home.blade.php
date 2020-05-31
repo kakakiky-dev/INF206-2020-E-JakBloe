@@ -65,8 +65,21 @@
 						<div class="row pr_button">
 							<form action="/pembayaran" method="get"><button type="submit" name="search" value="{{$i->id}}" class="cart_btn">Beli sekarang</button></form>&nbsp;&nbsp;<form action="/pembeli" method="get"><button type="submit" name="search" value="{{$i->id}}" class="cart_btn">Daftar Pembeli</button></form>
 						</div>&nbsp;
+						@php
+							$pembelis  =DB::table('pembeli')->where('idBarang', '=', $i->id)->get();
+							$total =0;
+							@endphp
+						@foreach ($pembelis as $pembeli)
+						@php
+								$total+=$pembeli->dibeli;
+								@endphp
+						@endforeach
+						@php
+							$value = ($total - 0) * (100 - 0) / ($i->Target - 0) + 0
+							
+						@endphp
 						<div class="progress">
-						<div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+						<div class="progress-bar bg-success" role="progressbar" style="width: {{$value}}%" aria-valuenow="{{$value}}" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 					</div>
                     </div>
