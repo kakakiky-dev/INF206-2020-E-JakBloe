@@ -49,37 +49,35 @@ class BlogController extends Controller
 	public function konfirmasi(Request $request)
 	{
 		$search = $request->get('search');
-		$isi = DB::table('post')->where('id', '=',$search);
+		$isi = DB::table('post')->where('id', '=', $search);
 		$isi = $isi->get();
-		return view('konfirmasi',['isi'=>$isi]);
+		return view('konfirmasi', ['isi' => $isi]);
 	}
 
-	public function gambarkonfirmasi(Request $request)
+	public function gambarkonfirmasi(Request $request, $id)
 	{
-		$post= new konfirmasi();
-		$post->id=$request->input('search');
-		if($request->hasfile('file'))
-		{
-			$gambar=$request->file('file');
-			$extension=$gambar->getClientOriginalExtension();
-			$filename=time().'.'. $extension;
+		if ($request->hasfile('file')) {
+			$gambar = $request->file('file');
+			$extension = $gambar->getClientOriginalExtension();
+			$filename = time() . '.' . $extension;
 			$gambar->move('img/konfirmasi', $filename);
-			$post->file=$filename;
-		}else{
+			$filenameext = $filename;
+		} else {
 			return $request;
-			$post->file='';
+			$filenameext = '';
 		}
-
-		$post->save();
-		return redirect('home')->with('post',$post);
+		DB::table('pembeli')
+			->where('id', $id)
+			->update(['gambar' => $filenameext]);
+		return redirect('home');
 	}
 
 	public function pembayaran(Request $request)
 	{
 		$search = $request->get('search');
-		$isi = DB::table('post')->where('id', '=',$search);
+		$isi = DB::table('post')->where('id', '=', $search);
 		$isi = $isi->get();
-		return view('pembayaran',['isi'=>$isi]);
+		return view('pembayaran', ['isi' => $isi]);
 	}
 
 	public function post($id)
@@ -90,7 +88,7 @@ class BlogController extends Controller
 
 	public function edit($id)
 	{
-		$user=User::find($id);
+		$user = User::find($id);
 
 		return view('edit', compact('user'));
 	}
@@ -118,59 +116,58 @@ class BlogController extends Controller
 
 	public function insert(Request $request)
 	{
-		$post=new Post();
+		$post = new Post();
 		$pengguna = auth()->user();
-		$namanya= ($pengguna->name);
-		$post->Nama=$namanya;
-		$post->Judul=$request->input('Judul');
-		$post->Target=$request->input('Target');
-		$post->Harga=$request->input('Harga');
+		$namanya = ($pengguna->name);
+		$post->Nama = $namanya;
+		$post->Judul = $request->input('Judul');
+		$post->Target = $request->input('Target');
+		$post->Harga = $request->input('Harga');
 
-		if($request->hasfile('file'))
-		{
-			$gambar=$request->file('file');
-			$extension=$gambar->getClientOriginalExtension();
-			$filename=time().'.'. $extension;
+		if ($request->hasfile('file')) {
+			$gambar = $request->file('file');
+			$extension = $gambar->getClientOriginalExtension();
+			$filename = time() . '.' . $extension;
 			$gambar->move('img/gambar', $filename);
-			$post->file=$filename;
-		}else{
+			$post->file = $filename;
+		} else {
 			return $request;
-			$post->file='';
+			$post->file = '';
 		}
 
 		$post->save();
-		return redirect('home')->with('post',$post);
+		return redirect('home')->with('post', $post);
 	}
-	
+
 	public function barang(Request $request)
 	{
 		$user = auth()->user();
-		$pembeli= ($user->name);
-		$gambar= ($user->file);
+		$pembeli = ($user->name);
+		$gambar = ($request->post('file'));
 		$dibeli = $request->get('dibeli');
 		$alamat = $request->get('alamat');
 		$hp = $request->get('hp');
 		$search = $request->get('search');
-		$isi = DB::table('post')->where('id', '=',$search);
+		$isi = DB::table('post')->where('id', '=', $search);
 		$isi = $isi->get();
-		$dataform = array('idBarang' => $search, 'pembeli' => $pembeli,'dibeli' => $dibeli,'gambar' => $gambar,'alamat' =>$alamat, 'no_hp' =>$hp);
-		DB::table('pembeli')->insert($dataform);
-		return view('konfirmasi',['isi'=>$isi]);
+		$dataform = array('idUser' => $user->id, 'idBarang' => $search, 'pembeli' => $pembeli, 'dibeli' => $dibeli, 'gambar' => $gambar, 'alamat' => $alamat, 'no_hp' => $hp);
+		$id = DB::table('pembeli')->insertGetId($dataform);
+		return view('konfirmasi', ['isi' => $isi, 'id' => $id]);
 	}
 
 	public function pembeli(Request $request)
 	{
 		$search = $request->get('search');
-		$isi = DB::table('pembeli')->where('idBarang', '=',$search);
+		$isi = DB::table('pembeli')->where('idBarang', '=', $search);
 		$isi = $isi->get();
-		return view('pembeli',['isi'=>$isi]);
+		return view('pembeli', ['isi' => $isi]);
 	}
 
 	public function cari(Request $request)
 	{
 		$cari = $request->get('cari');
-        $isi = DB::table('post')->where('Judul', 'like', '%' .$cari. '%');
-        $isi = $isi->get();
-        return view('home',['isi'=>$isi]);
+		$isi = DB::table('post')->where('Judul', 'like', '%' . $cari . '%');
+		$isi = $isi->get();
+		return view('home', ['isi' => $isi]);
 	}
 }

@@ -70,7 +70,7 @@ Route::get('/post/{id}', 'BlogController@post')->name('blog.post');
 Route::post('/insert', 'BlogController@insert')->name('blog.insert');
 Route::post('/barang', 'BlogController@barang');
 Route::get('/pembeli', 'BlogController@pembeli');
-Route::post('/gambarkonfirmasi', 'BlogController@gambarkonfirmasi');
+Route::post('/gambarkonfirmasi/{id}', 'BlogController@gambarkonfirmasi')->name('blog.gambarkonfirmasi');
 
 //Update User Profile
 Route::patch('/edit', 'BlogController@update');
