@@ -43,7 +43,9 @@ class BlogController extends Controller
 
 	public function profile()
 	{
-		return view('profile');
+		$isi = DB::table("post")->where("idUser","=",auth()->user()->id)->orderBy("created_at","desc")->get();
+		
+		return view('profile', ['isi' => $isi]);
 	}
 
 	public function konfirmasi(Request $request)
@@ -123,6 +125,7 @@ class BlogController extends Controller
 		$post->Judul = $request->input('Judul');
 		$post->Target = $request->input('Target');
 		$post->Harga = $request->input('Harga');
+		$post->idUser = $pengguna->id;
 
 		if ($request->hasfile('file')) {
 			$gambar = $request->file('file');
